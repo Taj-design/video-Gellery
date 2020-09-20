@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="gallery" content="video Gallery">
+    <meta name="creative" content="Design">
+    <meta name="creative" content="small content">
+    <title>Video Gallery</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    
+    <div class="mainCnt">
+        <h2>Responsive Video Gallery</h2>
+        <div class="row">
+            <div class="col">
+                <div class="img_Fluid" id="d-none">
+                    <img src="img/gallery2.jpg" alt="fist Imgage">
+                        <img src="img/playbutton.png" alt="plyabutton" class="plyabutton" onclick="playVideo('img/video2.mp4')">
+                
+                </div>
+            </div>
+            <div class="col">
+              <div class="items">
+                  <div class="fluid_img">
+                      <img src="img/gallery4.jpg" alt="item image">
+                      <div class="plyabutton" onclick="playVideo('img/video.mp4')">
+                          <img src="img/playbutton.png" alt="">
+                      </div>
+                  </div>
+                  <p> 1960s with the release of Letraset sheets containing Lorem Ipsum pass.</p>
+                </div>
+            <div class="items">
+                <div class="fluid_img">
+                    <img src="img/gallery6.jpg" alt="item image">
+                    <div class="plyabutton" onclick="playVideo('img/video4.mp4')">
+                        <img src="img/playbutton.png" alt="">
+                    </div>
+                </div>
+                <p> 1960s with the release of Letraset sheets containing Lorem Ipsum pass.</p>
+            </div>
+            <div class="items">
+                <div class="fluid_img">
+                    <img src="img/gallery5.jpg" alt="item image">
+                    <div class="plyabutton" onclick="playVideo('img/video5.mp4')">
+                        <img src="img/playbutton.png" alt="">
+                    </div>
+                </div>
+                <p> 1960s with the release of Letraset sheets containing Lorem Ipsum pass.</p>
+            </div>
+            <div class="items">
+                <div class="fluid_img">
+                    <img src="img/gallery7.jpg" alt="item image">
+                    <div class="plyabutton" onclick="playVideo('img/video6.mp4')">
+                        <img src="img/playbutton.png" alt="">
+                    </div>
+                </div>
+                <p> 1960s with the release of Letraset sheets containing Lorem Ipsum pass.</p>
+            </div>
+    </div>
+    </div>
+</div>
+    <div class="videoCtn" id="videoplayer">
+        <video width="100%" controls autoplay id="myvideo">
+            <source src="img/boat_bay_harbor_anchored_sea_water_1004.mp4" type="video/mp4">
+          </video> 
+
+            <img src="img/canclebutton.png" class="closeBtn" alt="cancle button" onclick="stopVideo()">
+
+        </div>
+   
+
+<script>
+
+var videoplar=document.getElementById("videoplayer");
+var myvideo= document.getElementById("myvideo");
+var imgfluid= document.getElementById("d-none");
+
+function stopVideo(){
+    videoplar.style.display="none";
+    imgfluid.style.visibility = "initial";
+}
+
+function playVideo(file){
+    myvideo.src= file;
+    videoplar.style.display = "block";
+    imgfluid.style.visibility = "hidden";
+}
+
+</script>
+
+
+
+
+
+
+
+
+
+</body>
+</html>
